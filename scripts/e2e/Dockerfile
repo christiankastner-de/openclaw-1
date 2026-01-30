@@ -20,4 +20,4 @@ RUN pnpm install --frozen-lockfile
 RUN pnpm build
 RUN pnpm ui:build
 
-CMD ["bash"]
+CMD ["node", "dist/index.js", "gateway", "--bind", "lan", "--port", "18789"]
